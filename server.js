@@ -1,9 +1,11 @@
 const Express = require('express');
 const bodyParser = require('body-parser');
 const auth = require('simple-service-auth');
+const cors = require('cors');
 const config = require('./config');
 
 const app = new Express();
+app.use(cors());
 app.use(bodyParser.json());
 
 const users = [{
