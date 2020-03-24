@@ -17,6 +17,7 @@ auth.setup({ secret: config.ROLE_SECRET, users });
 auth.http.route(app);
 
 require('./routes/wallet/airdrop')(app);
+require('./routes/gamestate/player')(app);
 
 app.listen(config.API_PORT, () => {
     console.log(`API listening on port ${config.API_PORT}`);
